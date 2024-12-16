@@ -1,18 +1,19 @@
 We are given a zip file to download which includes 4 files. 3 python files and a pcap files
 
-![[exfilen.png]]
+![alt text](https://github.com/Cl4r1ty-1/CTF/blob/main/HTB%20University/images/exfilen.png?raw=true)
 
 
 Upon opening the pcap file using Wireshark, we see that there are not many packets or devices. All of the traffic in this file is 2 devices communicating to each other using some sort of TCP protocol 
 
-![[wireshark1.png]]
+![alt text](https://github.com/Cl4r1ty-1/CTF/blob/main/HTB%20University/images/wireshark1.png?raw=true)
 
 Looking closer into the capture we see packets that are sending data in a JSON format such as 
 
 `{"init": true, "id": "efbb599758d1743333e5b43ac3e4e2b2", "cmd": "2ulbTirRTzn+EKa1bvu3"}`
 
-We then decide to look into the Python files. There are 3 Python scripts: `server.py`, `client.py`, and `params.py`. `params.py` seems to just hold variables that both the scripts import: 
-![[params1.png]]
+We then decide to look into the Python files. There are 3 Python scripts: `server.py`, `client.py`, and `params.py`. `params.py` seems to just hold variables that both the scripts import:
+
+![alt text](https://github.com/Cl4r1ty-1/CTF/blob/main/HTB%20University/images/params1.png?raw=true)
 
 Both the `client.py` and `server.py` files include a class named `LCG` which uses `params.py` and a `secret.py` file that we don't have access to that seems to include a `SEED` value. This `SEED` value, along with the values in `params.py` are used to encrypt and decrypt the communications between the server and the client.
 ```
@@ -152,7 +153,7 @@ echo "H4sIAAE4/WYAA+1YOXLDMAzs9Ro+My0bPzAvyYwnlsjF7gKkncJJOGoIgMDipKT2efsYn9YaUm
 
 After running this command in our own Linux terminal we get:
 
-![[flag1.png]]
+![alt text](https://github.com/Cl4r1ty-1/CTF/blob/main/HTB%20University/images/flag1.png?raw=true)
 
 Flag:
 `HTB{still_not_convinced_about_LCG_security?}`
