@@ -67,7 +67,7 @@ def generate_packet_uuid(self):
 By taking that value and converting it from hex to decimal, we can use this formula to reverse the `_next` function.
 
 $$
-((a^{-1} \mod m) \cdot (\mathrm{id}} - b)) \mod m
+((a^{-1} \mod m) \cdot (\mathrm{id} - b)) \mod m
 $$
 
 
