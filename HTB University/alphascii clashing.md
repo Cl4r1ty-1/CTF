@@ -1,6 +1,6 @@
 We are given a docker instance to connect to and a zip file to download
 
-![alt text](https://github.com/Cl4r1ty-1/CTF/blob/main/HTB%20University/Pasted%20image%2020241216142504.png?raw=true)
+![alt text](https://github.com/Cl4r1ty-1/CTF/blob/main/HTB%20University/images/Pasted%20image%2020241216142504.png?raw=true)
 
 Inside the zip file is a `server.py` file that we can assume is also being run on the docker container. The server seems to be a simple login app, with the credentials to users stored in a dictionary and checked by first hashing the username and password using md5 and comparing that against user input.
 
