@@ -72,7 +72,7 @@ $$
 
 
 
-Which takes the inverse mod of a mod m, multiplies it with b from `params.py` subtracted from the `id` value from the packet all modulo m from `params.py`. We can write this in Python as follows:
+Which takes the inverse mod of `a` mod `m`, multiplies it with `b` from `params.py` subtracted from the `id` value from the packet, all modulo `m` from `params.py`. We can write this in Python as follows:
 ```
 # current_state is the id value from hex
 # prev_state is the seed for that packet
