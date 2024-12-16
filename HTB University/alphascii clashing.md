@@ -1,6 +1,6 @@
 We are given a docker instance to connect to and a zip file to download
 
-![[Pasted image 20241216142504.png]]
+![alt text](![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true))
 Inside the zip file is a `server.py` file that we can assume is also being run on the docker container. The server seems to be a simple login app, with the credentials to users stored in a dictionary and checked by first hashing the username and password using md5 and comparing that against user input.
 
 We see this interesting `for else` loop for the login functionality
