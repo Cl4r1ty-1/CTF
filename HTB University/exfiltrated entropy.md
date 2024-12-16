@@ -65,9 +65,11 @@ def generate_packet_uuid(self):
 ```
 
 By taking that value and converting it from hex to decimal, we can use this formula to reverse the `_next` function.
+
 $$
 ((a^{-1} \mod m) \cdot (\text{id\_from\_hex} - b)) \mod m
 $$
+
 Which takes the inverse mod of a mod m, multiplies it with b from `params.py` subtracted from the `id` value from the packet all modulo m from `params.py`. We can write this in Python as follows:
 ```
 # current_state is the id value from hex
