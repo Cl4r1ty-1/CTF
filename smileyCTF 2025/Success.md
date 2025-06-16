@@ -96,3 +96,5 @@ The end is just z3 jargon which I assume first checks if all values have been so
 └─$ python solve.py  
 Flag: .;,;.{imagine_if_i_made_it_compiled!!!}
 ```
+
+Flag: `.;,;.{imagine_if_i_made_it_compiled!!!}`
