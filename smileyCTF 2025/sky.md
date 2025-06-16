@@ -4,7 +4,7 @@ In this challenge, we are given a picture that we need to find the location of. 
 
 ![challenge](https://github.com/Cl4r1ty-1/CTF/blob/main/smileyCTF%202025/images/challenge.png?raw=true)
 
-Initially I chucked the photo into google images to see if I could find anything, however it seemed too be very obsessed with the type of tree.
+Initially I chucked the photo into google images to see if I could find anything, however it seemed to be very obsessed with the type of tree.
 
 ![init search](https://github.com/Cl4r1ty-1/CTF/blob/main/smileyCTF%202025/images/init_search.png?raw=true)
 
@@ -24,7 +24,7 @@ That's when I came across this image taken in UTC Mall, San Diego
 
 ![close](https://github.com/Cl4r1ty-1/CTF/blob/main/smileyCTF%202025/images/nearly_there.png?raw=true)
 
-Which looked more similar to the challenge image, so I decided to go and find that.
+Which looked similar to the challenge image, more so than the previous image, so I decided to go and find that.
 
 ![AHHHHH](https://github.com/Cl4r1ty-1/CTF/blob/main/smileyCTF%202025/images/yippee.png?raw=true)
 
