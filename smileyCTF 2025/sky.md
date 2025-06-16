@@ -2,31 +2,31 @@
 
 In this challenge, we are given a picture that we need to find the location of. Once we find the longitude and latitude coordinates of where this photo was taken, we need to submit them to a program to print the flag for us.
 
-![[challenge.png]]
+![[https://github.com/Cl4r1ty-1/CTF/blob/main/smileyCTF%202025/images/challenge.png?raw=true]]
 
 Initially I chucked the photo into google images to see if I could find anything, however it seemed too be very obsessed with the type of tree.
 
-![[init_search.png]]
+![[https://github.com/Cl4r1ty-1/CTF/blob/main/smileyCTF%202025/images/init_search.png?raw=true]]
 
 So I decided to just ask it straight up.
 
-![[w_strat.png]]
+![[https://github.com/Cl4r1ty-1/CTF/blob/main/smileyCTF%202025/images/w_strat.png?raw=true]]
 
 Amazing strategy I know.
 
 Anyway after coming across this image from a coffee shop in Bahrain I was convinced that wherever this was, was the answer.
 
-![[bh_coffee.png]]
+![[https://github.com/Cl4r1ty-1/CTF/blob/main/smileyCTF%202025/images/bh_coffee.png?raw=true]]
 
 Which led me down a rabbit hole of finding the shop and submitting the coordinates of that for a few tries. After getting sick of copying a POW script about 10 times it was obvious that I needed to look elsewhere.
 
 That's when I came across this image taken in UTC Mall, San Diego
 
-![[nearly_there.png]]
+![[https://github.com/Cl4r1ty-1/CTF/blob/main/smileyCTF%202025/images/nearly_there.png?raw=true]]
 
 Which looked more similar to the challenge image, so I decided to go and find that.
 
-![[yippee.png]]
+![[https://github.com/Cl4r1ty-1/CTF/blob/main/smileyCTF%202025/images/yippee.png?raw=true]]
 
 After copying the coordinates of this place from google maps, putting them in the correct format for the program and submitting them, I get the flag.
 
