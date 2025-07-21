@@ -257,6 +257,6 @@ From this screenshot we can see that the victim of the malware got the script fr
 
 At this point I just start decrypting all these packets until I find something interesting. Eventually I get to some data that when decrypted is some base64 encoded data. After decoding this I find that it is a .tar.gz file being sent to the c2 server! I decompress the file and inside is a `keys.txt` file which hold the flag!
 
-![cyberchef2.png](https://github.com/Cl4r1ty-1/CTF/blob/main/DownUnderCTF%202025/images/wireshark2.png?raw=true)
+![cyberchef2.png](https://github.com/Cl4r1ty-1/CTF/blob/main/DownUnderCTF%202025/images/cyberchef2.png?raw=true)
 
 Flag: `DUCTF{1_gu355_y0u_c4n_d3cRyPT_TLS_tr4ff1c}`
