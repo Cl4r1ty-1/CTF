@@ -2,11 +2,11 @@
 
 We are given URL to a login page and packet capture file.
 
-![[login_page.png]]
+![login_page.png](https://github.com/Cl4r1ty-1/CTF/blob/main/DownUnderCTF%202025/images/login_page.png?raw=true)
 
 On the login there are placeholder credentials, "jdoe" and "Password" so I decide to try and login with those. This seems to work and takes me to a very sketchy looking verification page.
 
-![[verify.png]]
+![verify.png](https://github.com/Cl4r1ty-1/CTF/blob/main/DownUnderCTF%202025/images/verify.png?raw=true)
 
 I decide to investigate further by going to the URL in the PowerShell command it tries to get the victim to run. This takes me to a very large base64 encoded PowerShell command
 
@@ -245,18 +245,18 @@ After working out what type of traffic I'm looking for I decide to open the pack
 
 Since one of the commands the script is looking for from the c2 is "exit" I decide to search for that string encrypted with the key extracted from the script. "exit" encrypted is `66798f8f` so the filter I use in Wireshark is `tcp contains 66:79:8f:8f` which checks all TCP packets (as the script uses TCP/TLS) for the bytes `66798f8f`. Low and behold one packet is found from the IP address `20.5.48.200`.
 
-![[CTF/DownUnderCTF 2025/images/wireshark1.png]]
+![CTF/DownUnderCTF 2025/images/wireshark1.png](https://github.com/Cl4r1ty-1/CTF/blob/main/DownUnderCTF%202025/images/wireshark1.png?raw=true)
 
 I decide to look at all the data going to and from this address using the `ip.addr` filter and from this I can map out a pretty good idea of what happened.
 
-![[wireshark2.png]]
+![wireshark2.png](https://github.com/Cl4r1ty-1/CTF/blob/main/DownUnderCTF%202025/images/wireshark2.png?raw=true)
 
 From this screenshot we can see that the victim of the malware got the script from the original website. The machine then connects to the c2 server and there is a stream on TLS Application Data following. I to use the filter `((ip.addr == 20.5.48.200)) && (tls.record.opaque_type == 23)` to hone in on those application data packets. I try to decrypt the data from one of these packets in CyberChef with RC4 and the key found in the script and that gives me some readable commands!
 
-![[cyberchef1.png]]
+![cyberchef1.png](https://github.com/Cl4r1ty-1/CTF/blob/main/DownUnderCTF%202025/images/cyberchef1.png?raw=true)
 
 At this point I just start decrypting all these packets until I find something interesting. Eventually I get to some data that when decrypted is some base64 encoded data. After decoding this I find that it is a .tar.gz file being sent to the c2 server! I decompress the file and inside is a `keys.txt` file which hold the flag!
 
-![[cyberchef2.png]]
+![cyberchef2.png](https://github.com/Cl4r1ty-1/CTF/blob/main/DownUnderCTF%202025/images/cyberchef2.png?raw=true)
 
 Flag: `DUCTF{1_gu355_y0u_c4n_d3cRyPT_TLS_tr4ff1c}`
