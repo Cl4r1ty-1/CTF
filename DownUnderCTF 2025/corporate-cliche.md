@@ -39,7 +39,7 @@ There is a way to bypass this however. If we look at how the `username` and `pas
     char username[32];
 ```
 
-Looking at how the program gets the password, we can see it uses `gets()` which is an insecure function as it allows us to write passed the buffer.
+Looking at how the program gets the password, we can see it uses `gets()` which is an insecure function as it allows us to write past the buffer.
 
 ```
     printf("Enter your password: ");
