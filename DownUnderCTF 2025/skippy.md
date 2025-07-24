@@ -250,6 +250,6 @@ So now we have a strings of AES encrypted bytes and two strings of readable char
 
 Putting all this into CyberChef, we successfully decrypted the string and got the flag!
 
-![[cyberchef_aes.png]]
+![cyberchef_aes.png](https://github.com/Cl4r1ty-1/CTF/edit/main/DownUnderCTF%202025/images/cyberchef_aes.png?raw=true)
 
 Flag: `DUCTF{There_echoes_a_chorus_enending_and_wild_Laughter_and_gossip_unruly_and_piled}`
